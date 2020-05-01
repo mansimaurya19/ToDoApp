@@ -20,7 +20,7 @@ app.use(express.urlencoded({extended:false}))
 function passwordProtected(req  , res,  next) {
   res.set('WWW-Authenticate' , 'Basic realm="Simple To-Do App" ' )
   console.log(req.headers.authorization)
-  if(req.headers.authorization == "Basic TWFuc2k6NjM4NjI4NjYyNA=="){
+  if(req.headers.authorization == "Basic TWFuc2k6amF2YXNjcmlwdA=="){
     next()
 } 
 else{
